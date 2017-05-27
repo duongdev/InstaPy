@@ -73,7 +73,7 @@ RUN git clone https://github.com/timgrossmann/InstaPy.git \
     && sed -ie 's/#self.display/self.display/g' instapy/instapy.py
 
 # Copying the your quickstart file into the container and setting directory
-COPY quickstart.py ./InstaPy
+COPY app.py ./InstaPy
 WORKDIR /InstaPy
 
-CMD ["python3.5", "quickstart.py"]
+CMD ["python3.5", "app.py"]
